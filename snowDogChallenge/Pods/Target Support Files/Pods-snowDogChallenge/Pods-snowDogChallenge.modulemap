@@ -1,0 +1,6 @@
+framework module Pods_snowDogChallenge {
+  umbrella header "Pods-snowDogChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
