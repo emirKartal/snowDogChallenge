@@ -3,15 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */; };
-		30E9B71D23A163A8001DF6F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71C23A163A8001DF6F6 /* ViewController.swift */; };
+		30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */; };
 		30E9B72023A163A8001DF6F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E9B71E23A163A8001DF6F6 /* Main.storyboard */; };
 		30E9B72223A163AA001DF6F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E9B72123A163AA001DF6F6 /* Assets.xcassets */; };
 		30E9B72523A163AA001DF6F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */; };
+		30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED779923A29EAC007E1D6D /* ApiController.swift */; };
+		30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED779B23A2ACBD007E1D6D /* AuthenticationApiController.swift */; };
+		30ED779F23A2AE26007E1D6D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED779E23A2AE26007E1D6D /* Globals.swift */; };
 		DA08F6CA62F522E1B9C0DCA0 /* Pods_snowDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +22,14 @@
 		01AA0573CF491F9ABE375FA4 /* Pods-snowDogChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.release.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		30E9B71723A163A8001DF6F6 /* snowDogChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowDogChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30E9B71C23A163A8001DF6F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		30E9B71F23A163A8001DF6F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30E9B72123A163AA001DF6F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E9B72423A163AA001DF6F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30E9B72623A163AA001DF6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30ED779923A29EAC007E1D6D /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		30ED779B23A2ACBD007E1D6D /* AuthenticationApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationApiController.swift; sourceTree = "<group>"; };
+		30ED779E23A2AE26007E1D6D /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		54315E5876E3B472E32D1597 /* Pods-snowDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowDogChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -69,8 +75,10 @@
 		30E9B71923A163A8001DF6F6 /* snowDogChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				30ED779D23A2AE11007E1D6D /* SupportingFiles */,
+				30ED779823A29E8D007E1D6D /* API */,
 				30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */,
-				30E9B71C23A163A8001DF6F6 /* ViewController.swift */,
+				30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */,
 				30E9B71E23A163A8001DF6F6 /* Main.storyboard */,
 				30E9B72123A163AA001DF6F6 /* Assets.xcassets */,
 				30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */,
@@ -79,13 +87,29 @@
 			path = snowDogChallenge;
 			sourceTree = "<group>";
 		};
+		30ED779823A29E8D007E1D6D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				30ED779923A29EAC007E1D6D /* ApiController.swift */,
+				30ED779B23A2ACBD007E1D6D /* AuthenticationApiController.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		30ED779D23A2AE11007E1D6D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				30ED779E23A2AE26007E1D6D /* Globals.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		3DBF2F4FED8694C08F358401 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				54315E5876E3B472E32D1597 /* Pods-snowDogChallenge.debug.xcconfig */,
 				01AA0573CF491F9ABE375FA4 /* Pods-snowDogChallenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -204,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E9B71D23A163A8001DF6F6 /* ViewController.swift in Sources */,
+				30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */,
 				30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */,
+				30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */,
+				30ED779F23A2AE26007E1D6D /* Globals.swift in Sources */,
+				30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
