@@ -31,7 +31,12 @@ class ApiController {
     }
     
     class func getHeader() -> HTTPHeaders {
-        return ["Accept":"application/json"]
+        if let accessToken = User.currentUser.accessToken {
+            return  ["Authorization":"token \(accessToken)"]
+        } else {
+            return ["Accept":"application/json"]
+        }
+        
     }
 }
 

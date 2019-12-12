@@ -8,5 +8,6 @@ target 'snowDogChallenge' do
   # Pods for snowDogChallenge
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'Valet', '~> 3.2'
 
 end

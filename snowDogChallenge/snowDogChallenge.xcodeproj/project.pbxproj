@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304A0C6423A2E67F00B50E6D /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */; };
+		30B5F83823A2BC840019BD75 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5F83723A2BC840019BD75 /* UserModel.swift */; };
 		30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */; };
 		30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */; };
 		30E9B72023A163A8001DF6F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E9B71E23A163A8001DF6F6 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		01AA0573CF491F9ABE375FA4 /* Pods-snowDogChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.release.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		30B5F83723A2BC840019BD75 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		30E9B71723A163A8001DF6F6 /* snowDogChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowDogChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		304A0C6123A2E64B00B50E6D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				304A0C6223A2E66100B50E6D /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		304A0C6223A2E66100B50E6D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		304A0C6523A2E92A00B50E6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30E9B71E23A163A8001DF6F6 /* Main.storyboard */,
+				30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		304A0C6623A2E94500B50E6D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		30E9B70E23A163A8001DF6F6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,14 +112,15 @@
 		30E9B71923A163A8001DF6F6 /* snowDogChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */,
+				30E9B72623A163AA001DF6F6 /* Info.plist */,
+				304A0C6123A2E64B00B50E6D /* Helpers */,
 				30ED779D23A2AE11007E1D6D /* SupportingFiles */,
 				30ED779823A29E8D007E1D6D /* API */,
-				30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */,
-				30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */,
-				30E9B71E23A163A8001DF6F6 /* Main.storyboard */,
+				30ED77A023A2B28E007E1D6D /* Model */,
+				304A0C6523A2E92A00B50E6D /* View */,
+				304A0C6623A2E94500B50E6D /* ViewController */,
 				30E9B72123A163AA001DF6F6 /* Assets.xcassets */,
-				30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */,
-				30E9B72623A163AA001DF6F6 /* Info.plist */,
 			);
 			path = snowDogChallenge;
 			sourceTree = "<group>";
@@ -102,6 +140,14 @@
 				30ED779E23A2AE26007E1D6D /* Globals.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		30ED77A023A2B28E007E1D6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30B5F83723A2BC840019BD75 /* UserModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		3DBF2F4FED8694C08F358401 /* Pods */ = {
@@ -231,7 +277,9 @@
 				30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */,
 				30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */,
 				30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */,
+				304A0C6423A2E67F00B50E6D /* StoryboardExtension.swift in Sources */,
 				30ED779F23A2AE26007E1D6D /* Globals.swift in Sources */,
+				30B5F83823A2BC840019BD75 /* UserModel.swift in Sources */,
 				30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

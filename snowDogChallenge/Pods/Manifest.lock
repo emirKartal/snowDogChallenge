@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.9.1)
   - SwiftyJSON (5.0.0)
+  - Valet (3.2.6)
 
 DEPENDENCIES:
   - Alamofire
   - SwiftyJSON
+  - Valet (~> 3.2)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - SwiftyJSON
+    - Valet
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Valet: dcc4ff74f0d010be665239ab89c7a4a5cd39ee33
 
-PODFILE CHECKSUM: e957fd7261238de2be619f99bfe3954f919e1ed2
+PODFILE CHECKSUM: c4f3fd6c8f878ba65237f097f62eeb8787f38786
 
 COCOAPODS: 1.8.4

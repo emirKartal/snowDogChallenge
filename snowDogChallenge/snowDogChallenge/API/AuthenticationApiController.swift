@@ -38,9 +38,7 @@ class AuthenticationApiController: ApiController {
         performRequest(endPoint: .accessTokenEndPoint, parameters: parameters) { (result) in
             switch result {
             case .success(let json):
-                let tokenType = json["token_type"].string
-                let accessToken = json["access_token"].string
-                print(accessToken)
+                User.saveToken(response: json)
                 break
             case .failure(let error):
                 break
