@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301D4F3823A3F95A008D3787 /* FeedApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F3723A3F95A008D3787 /* FeedApiController.swift */; };
+		301D4F3A23A41ABD008D3787 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */; };
 		304A0C6423A2E67F00B50E6D /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */; };
+		304A0C6823A2EA2B00B50E6D /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304A0C6723A2EA2B00B50E6D /* Walkthrough.storyboard */; };
+		304A0C6A23A2EB6400B50E6D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C6923A2EB6400B50E6D /* MainViewController.swift */; };
+		304A0C6C23A2EC7900B50E6D /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C6B23A2EC7900B50E6D /* WalkthroughViewController.swift */; };
+		304A0C7123A2F96E00B50E6D /* HomeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C7023A2F96E00B50E6D /* HomeFeedViewController.swift */; };
+		304A0C7323A2F97F00B50E6D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C7223A2F97F00B50E6D /* SearchViewController.swift */; };
+		304A0C7623A2FA4800B50E6D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C7523A2FA4800B50E6D /* TabBarController.swift */; };
+		304A0C7923A2FE5300B50E6D /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C7823A2FE5300B50E6D /* NavigationController.swift */; };
 		30B5F83823A2BC840019BD75 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5F83723A2BC840019BD75 /* UserModel.swift */; };
 		30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */; };
 		30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */; };
@@ -22,7 +31,16 @@
 
 /* Begin PBXFileReference section */
 		01AA0573CF491F9ABE375FA4 /* Pods-snowDogChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.release.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		301D4F3723A3F95A008D3787 /* FeedApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedApiController.swift; sourceTree = "<group>"; };
+		301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		304A0C6723A2EA2B00B50E6D /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		304A0C6923A2EB6400B50E6D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		304A0C6B23A2EC7900B50E6D /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		304A0C7023A2F96E00B50E6D /* HomeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewController.swift; sourceTree = "<group>"; };
+		304A0C7223A2F97F00B50E6D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		304A0C7523A2FA4800B50E6D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		304A0C7823A2FE5300B50E6D /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30B5F83723A2BC840019BD75 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		30E9B71723A163A8001DF6F6 /* snowDogChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowDogChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */,
+				301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -77,18 +96,57 @@
 		304A0C6523A2E92A00B50E6D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				30E9B71E23A163A8001DF6F6 /* Main.storyboard */,
 				30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		304A0C6623A2E94500B50E6D /* ViewController */ = {
+		304A0C6D23A2F0B500B50E6D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */,
+				304A0C7723A2FE3700B50E6D /* Navigation */,
+				304A0C6F23A2F0DE00B50E6D /* Walkthrough */,
+				304A0C7423A2F9F700B50E6D /* Tabbar */,
+				304A0C6E23A2F0C700B50E6D /* Main */,
 			);
-			path = ViewController;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		304A0C6E23A2F0C700B50E6D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				30E9B71E23A163A8001DF6F6 /* Main.storyboard */,
+				30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */,
+				304A0C6923A2EB6400B50E6D /* MainViewController.swift */,
+				304A0C7023A2F96E00B50E6D /* HomeFeedViewController.swift */,
+				304A0C7223A2F97F00B50E6D /* SearchViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		304A0C6F23A2F0DE00B50E6D /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				304A0C6723A2EA2B00B50E6D /* Walkthrough.storyboard */,
+				304A0C6B23A2EC7900B50E6D /* WalkthroughViewController.swift */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		304A0C7423A2F9F700B50E6D /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				304A0C7523A2FA4800B50E6D /* TabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		304A0C7723A2FE3700B50E6D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				304A0C7823A2FE5300B50E6D /* NavigationController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		30E9B70E23A163A8001DF6F6 = {
@@ -119,7 +177,7 @@
 				30ED779823A29E8D007E1D6D /* API */,
 				30ED77A023A2B28E007E1D6D /* Model */,
 				304A0C6523A2E92A00B50E6D /* View */,
-				304A0C6623A2E94500B50E6D /* ViewController */,
+				304A0C6D23A2F0B500B50E6D /* Modules */,
 				30E9B72123A163AA001DF6F6 /* Assets.xcassets */,
 			);
 			path = snowDogChallenge;
@@ -130,6 +188,7 @@
 			children = (
 				30ED779923A29EAC007E1D6D /* ApiController.swift */,
 				30ED779B23A2ACBD007E1D6D /* AuthenticationApiController.swift */,
+				301D4F3723A3F95A008D3787 /* FeedApiController.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -220,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E9B72523A163AA001DF6F6 /* LaunchScreen.storyboard in Resources */,
+				304A0C6823A2EA2B00B50E6D /* Walkthrough.storyboard in Resources */,
 				30E9B72223A163AA001DF6F6 /* Assets.xcassets in Resources */,
 				30E9B72023A163A8001DF6F6 /* Main.storyboard in Resources */,
 			);
@@ -275,12 +335,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */,
+				304A0C7323A2F97F00B50E6D /* SearchViewController.swift in Sources */,
+				301D4F3823A3F95A008D3787 /* FeedApiController.swift in Sources */,
 				30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */,
 				30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */,
+				304A0C6C23A2EC7900B50E6D /* WalkthroughViewController.swift in Sources */,
 				304A0C6423A2E67F00B50E6D /* StoryboardExtension.swift in Sources */,
 				30ED779F23A2AE26007E1D6D /* Globals.swift in Sources */,
 				30B5F83823A2BC840019BD75 /* UserModel.swift in Sources */,
+				304A0C7923A2FE5300B50E6D /* NavigationController.swift in Sources */,
+				301D4F3A23A41ABD008D3787 /* NotificationNameExtension.swift in Sources */,
 				30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */,
+				304A0C7623A2FA4800B50E6D /* TabBarController.swift in Sources */,
+				304A0C6A23A2EB6400B50E6D /* MainViewController.swift in Sources */,
+				304A0C7123A2F96E00B50E6D /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

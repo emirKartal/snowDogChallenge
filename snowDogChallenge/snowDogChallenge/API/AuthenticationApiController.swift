@@ -10,7 +10,6 @@ import Foundation
 
 class AuthenticationApiController: ApiController {
     
-    
     // Getting code from redirect URL
     class func getCode(from url: URL) {
         let components = NSURLComponents(url: url, resolvingAgainstBaseURL: false)
@@ -35,15 +34,32 @@ class AuthenticationApiController: ApiController {
         parameters["client_secret"] = CLIENT_SECRET
         parameters["code"] = code
         
-        performRequest(endPoint: .accessTokenEndPoint, parameters: parameters) { (result) in
+        performRequest(url: BASE_URL, endPoint: .accessTokenEndPoint, parameters: parameters) { (result) in
             switch result {
             case .success(let json):
                 User.saveToken(response: json)
+                NotificationCenter.default.post(name: .notifyUserDataFunc, object: nil)
                 break
-            case .failure(let error):
+            case .failure(_):
                 break
             }
         }
+    }
+    
+    class func getUserData(completion: @escaping (_ result: APIResult<Any?,APIError>)->()) {
+        performRequest(endPoint: .userEndPoint, parameters: nil) { (result) in
+            switch result {
+            case .success(let json):
+                debugPrint(json)
+                User.parseAndSaveUserData(json: json)
+                completion(.success(nil))
+                break
+            case .failure(let error):
+                completion(.failure(error))
+                break
+            }
+        }
+        
     }
     
     

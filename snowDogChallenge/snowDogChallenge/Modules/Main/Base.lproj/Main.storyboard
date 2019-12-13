@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TOj-hC-IOI">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="qV2-7D-0ba">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="TOj-hC-IOI" customClass="MainViewController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2PF-sK-j0l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEC-F2-wuW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78823529410000004" green="0.1764705882" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xEC-F2-wuW" firstAttribute="leading" secondItem="lGx-dQ-SpD" secondAttribute="leading" id="90z-DY-dCA"/>
+                            <constraint firstItem="xEC-F2-wuW" firstAttribute="top" secondItem="2PF-sK-j0l" secondAttribute="top" id="9eQ-45-uvN"/>
+                            <constraint firstItem="lGx-dQ-SpD" firstAttribute="trailing" secondItem="xEC-F2-wuW" secondAttribute="trailing" id="JTI-OM-7XC"/>
+                            <constraint firstAttribute="bottom" secondItem="xEC-F2-wuW" secondAttribute="bottom" id="nCO-kF-ME1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lGx-dQ-SpD"/>
+                    </view>
+                    <connections>
+                        <outlet property="splashView" destination="xEC-F2-wuW" id="FaF-PU-TAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fN-kK-mph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-651" y="21"/>
+        </scene>
+        <!--Home Feed View Controller-->
+        <scene sceneID="ABk-EL-rYP">
+            <objects>
+                <viewController storyboardIdentifier="HomeFeedViewController" id="Q9Y-0w-2jD" customClass="HomeFeedViewController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3KO-iD-4TI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TdL-CY-DQK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CAR-OO-T6V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huB-vr-9Lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="1486"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="rzo-Jv-zyq">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="UEZ-TG-A3K" customClass="SearchViewController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vLz-2B-W3E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YDt-1W-VTf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UDm-VE-8Fi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAf-rW-cyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="1486"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dL3-jP-9aW">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="28n-vr-V8H" customClass="TabBarController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RRr-aX-Xcs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="neh-Wf-bCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="22"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kzi-ai-YEx">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPy-Qs-vaw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kzi-ai-YEx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8A2-OX-HXd"/>
+                            <constraint firstItem="Kzi-ai-YEx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VPM-6c-tVH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1651" y="457"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aa9-uP-Dte">
+            <objects>
+                <navigationController storyboardIdentifier="FeedNavigation" automaticallyAdjustsScrollViewInsets="NO" id="ktj-x1-gmW" customClass="NavigationController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PJu-Fw-0Qj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q9Y-0w-2jD" kind="relationship" relationship="rootViewController" id="5JE-ti-XGd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxx-ai-Qjy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652.17391304347836" y="801.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2nV-BM-M9r">
+            <objects>
+                <navigationController storyboardIdentifier="SearchNavigation" automaticallyAdjustsScrollViewInsets="NO" id="u7A-sW-Zpj" customClass="NavigationController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Laa-RS-EbM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UEZ-TG-A3K" kind="relationship" relationship="rootViewController" id="Uou-N7-yMh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0F-hJ-o2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="802"/>
+        </scene>
+    </scenes>
+</document>

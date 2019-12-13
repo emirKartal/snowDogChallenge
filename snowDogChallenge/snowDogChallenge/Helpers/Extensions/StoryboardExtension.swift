@@ -22,6 +22,7 @@ extension StoryboardIdentiable where Self: UIViewController {
 extension UIStoryboard {
     enum StoryboardName: String {
         case main
+        case walkthrough
         
         var filename: String {
             return rawValue.capitalized
