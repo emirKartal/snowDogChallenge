@@ -34,7 +34,7 @@ class AuthenticationApiController: ApiController {
         parameters["client_secret"] = CLIENT_SECRET
         parameters["code"] = code
         
-        performRequest(url: BASE_URL, endPoint: .accessTokenEndPoint, parameters: parameters) { (result) in
+        performRequest(url: BASE_URL, endPoint: EndPoint.accessTokenEndPoint.rawValue, parameters: parameters) { (result) in
             switch result {
             case .success(let json):
                 User.saveToken(response: json)
@@ -47,7 +47,7 @@ class AuthenticationApiController: ApiController {
     }
     
     class func getUserData(completion: @escaping (_ result: APIResult<Any?,APIError>)->()) {
-        performRequest(endPoint: .userEndPoint, parameters: nil) { (result) in
+        performRequest(endPoint: EndPoint.userEndPoint.rawValue, parameters: nil) { (result) in
             switch result {
             case .success(let json):
                 debugPrint(json)

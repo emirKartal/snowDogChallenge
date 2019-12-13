@@ -10,4 +10,42 @@ import Foundation
 
 class FeedApiController: ApiController {
     
+    class func getFeeds(completion: @escaping (_ result: APIResult<[FeedModel]?, APIError>)->()) {
+        
+        let feedUrl = User.currentUser.receivedEventsEndPoint!
+        
+        performRequest(endPoint: feedUrl, parameters: nil) { (result) in
+            switch result {
+            case .success(let json):
+                let feedArray = json.array
+                var parsedFeedArray = [FeedModel]()
+                
+                feedArray?.forEach({ (feed) in
+                    let parsedFeed = FeedModel.parseFeedModel(from: feed)
+                    parsedFeedArray.append(parsedFeed)
+                })
+                
+                completion(.success(parsedFeedArray))
+                break
+            case .failure(let error):
+                completion(.failure(error))
+                break
+            }
+            
+        }
+    }
+    
+    class func getRepoDetail(endPoint: String) {
+        
+        performRequest(endPoint: endPoint, parameters: nil) { (result) in
+            switch result {
+            case .success(let json):
+                break
+            case .failure(let error):
+                break
+            }
+        }
+        
+    }
+    
 }

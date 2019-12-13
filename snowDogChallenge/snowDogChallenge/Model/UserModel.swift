@@ -22,6 +22,7 @@ private enum Keys: String {
     case followingsCount = "following"
     case followersCount = "followers"
     case publicReposCount = "public_repos"
+    case receivedEventsUrl = "received_events_url"
 }
 
 class User {
@@ -49,6 +50,13 @@ class User {
     var followingsCount: Int?
     var followersCount: Int?
     var publicReposCount: Int?
+    var receivedEventsUrl: String?
+    var receivedEventsEndPoint: String? {
+        get {
+            let charCount = API_URL.count
+            return String(self.receivedEventsUrl?.suffix((self.receivedEventsUrl?.count ?? charCount) - charCount) ?? "")
+        }
+    }
     
     //Parsing method userData
     class func saveToken(response: JSON) {
@@ -66,6 +74,7 @@ class User {
         currentUser.followingsCount = json[Keys.followingsCount.rawValue].int
         currentUser.followersCount = json[Keys.followersCount.rawValue].int
         currentUser.publicReposCount = json[Keys.publicReposCount.rawValue].int
+        currentUser.receivedEventsUrl = json[Keys.receivedEventsUrl.rawValue].string
         
         saveUserDataToKeychain()
     }
@@ -102,6 +111,9 @@ class User {
         if let publicReposCount = User.currentUser.publicReposCount {
             currentUser.myValet.set(string: "\(publicReposCount)", forKey: Keys.publicReposCount.rawValue)
         }
+        if let receivedEventsUrl = User.currentUser.receivedEventsUrl, !receivedEventsUrl.isEmpty {
+            currentUser.myValet.set(string: receivedEventsUrl, forKey: Keys.receivedEventsUrl.rawValue)
+        }
         
     }
     
@@ -116,6 +128,7 @@ class User {
         currentUser.followingsCount = Int(currentUser.myValet.string(forKey: Keys.followingsCount.rawValue) ?? "")
         currentUser.followersCount = Int(currentUser.myValet.string(forKey: Keys.followersCount.rawValue) ?? "")
         currentUser.publicReposCount = Int(currentUser.myValet.string(forKey: Keys.publicReposCount.rawValue) ?? "")
+        currentUser.receivedEventsUrl = currentUser.myValet.string(forKey: Keys.receivedEventsUrl.rawValue)
         
         
     }
@@ -131,14 +144,8 @@ class User {
         currentUser.followingsCount = nil
         currentUser.followersCount = nil
         currentUser.publicReposCount = nil
-        /*
-         var userId: Int?
-         var userName: String?
-         var userImage: String?
-         var createdAt: String?
-         var followingsCount: Int?
-         var followersCount: Int?
-         var publicReposCount: Int?
-         */
+        currentUser.receivedEventsUrl = nil
+
     }
 }
+

@@ -12,11 +12,11 @@ import SwiftyJSON
 
 class ApiController {
     
-    class func performRequest(url: String = API_URL,endPoint: EndPoint, parameters: [String:Any]?, method: HTTPMethod = .get, encoding: ParameterEncoding = URLEncoding(destination: .queryString), completion: @escaping (_ response: APIResult<JSON, APIError>)->()) {
+    class func performRequest(url: String = API_URL,endPoint: String, parameters: [String:Any]?, method: HTTPMethod = .get, encoding: ParameterEncoding = URLEncoding(destination: .queryString), completion: @escaping (_ response: APIResult<JSON, APIError>)->()) {
 
         let manager = Alamofire.SessionManager.default
         
-        manager.request(url+endPoint.rawValue, method: method, parameters: parameters, encoding: encoding, headers: getHeader()).responseJSON { (response: DataResponse) in
+        manager.request(url+endPoint, method: method, parameters: parameters, encoding: encoding, headers: getHeader()).responseJSON { (response: DataResponse) in
             
             let json = JSON(response.result.value as Any)
             
@@ -82,4 +82,5 @@ public enum APIResult<Value,APIError> {
 enum EndPoint: String {
     case accessTokenEndPoint = "login/oauth/access_token"
     case userEndPoint = "user"
+    
 }
