@@ -95,7 +95,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sso-xS-VpE">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nba-No-OGy">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nba-No-OGy" customClass="CachedImageClass" customModule="snowDogChallenge" customModuleProvider="target">
                                                             <rect key="frame" x="20" y="20" width="60" height="60"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="60" id="AGm-76-meH"/>
@@ -182,7 +182,7 @@
                                             <outlet property="feedTitleLabel" destination="3Vx-1h-uQ3" id="rzL-2o-fkr"/>
                                             <outlet property="repoNameLabel" destination="Bxh-zd-mvY" id="7jV-ow-Wky"/>
                                             <outlet property="timeLabel" destination="NUV-r6-MLG" id="Dxa-gX-Hjq"/>
-                                            <outlet property="userImageView" destination="Nba-No-OGy" id="FR5-Ib-73B"/>
+                                            <outlet property="userImageView" destination="Nba-No-OGy" id="rfX-2R-5Rf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -205,6 +205,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huB-vr-9Lv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-652.17391304347836" y="1485.9375"/>
+        </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="y7D-oA-uxi">
+            <objects>
+                <viewController storyboardIdentifier="RepoDetailViewController" id="KhO-gh-BPa" customClass="RepoDetailViewController" customModule="snowDogChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qiq-5R-ZfS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9bt-dz-dp9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QP4-yX-Ccm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-645" y="2142"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="rzo-Jv-zyq">

@@ -35,13 +35,16 @@ class FeedApiController: ApiController {
         }
     }
     
-    class func getRepoDetail(endPoint: String) {
+    class func getRepoDetail(endPoint: String, completion: @escaping (_ result: APIResult<RepoDetailModel?, APIError>)->()) {
         
         performRequest(endPoint: endPoint, parameters: nil) { (result) in
             switch result {
             case .success(let json):
+                let repoDetail = RepoDetailModel.parseRepoDetailModel(from: json)
+                completion(.success(repoDetail))
                 break
             case .failure(let error):
+                completion(.failure(error))
                 break
             }
         }

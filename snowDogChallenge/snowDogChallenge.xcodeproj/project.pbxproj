@@ -34,6 +34,8 @@
 		30F1648D23A4DF600080A0E0 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1648C23A4DF600080A0E0 /* FeedTableViewCell.swift */; };
 		30F1649023A4E1A00080A0E0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1648F23A4E1A00080A0E0 /* Protocols.swift */; };
 		30F1649223A4E23F0080A0E0 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649123A4E23F0080A0E0 /* UIViewControllerExtension.swift */; };
+		30F1649423A504CB0080A0E0 /* CachedImageClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649323A504CB0080A0E0 /* CachedImageClass.swift */; };
+		30F1649623A52B310080A0E0 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649523A52B310080A0E0 /* RepoDetailViewController.swift */; };
 		DA08F6CA62F522E1B9C0DCA0 /* Pods_snowDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		30F1648C23A4DF600080A0E0 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		30F1648F23A4E1A00080A0E0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		30F1649123A4E23F0080A0E0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		30F1649323A504CB0080A0E0 /* CachedImageClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageClass.swift; sourceTree = "<group>"; };
+		30F1649523A52B310080A0E0 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		54315E5876E3B472E32D1597 /* Pods-snowDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowDogChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +122,7 @@
 			children = (
 				30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */,
 				301D4F3F23A4607F008D3787 /* Spinner.swift */,
+				30F1649323A504CB0080A0E0 /* CachedImageClass.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				304A0C6923A2EB6400B50E6D /* MainViewController.swift */,
 				304A0C7023A2F96E00B50E6D /* HomeFeedViewController.swift */,
 				304A0C7223A2F97F00B50E6D /* SearchViewController.swift */,
+				30F1649523A52B310080A0E0 /* RepoDetailViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -389,9 +395,11 @@
 				301D4F3E23A45098008D3787 /* FeedModel.swift in Sources */,
 				301D4F3823A3F95A008D3787 /* FeedApiController.swift in Sources */,
 				301D4F4223A46218008D3787 /* RepoDetailModel.swift in Sources */,
+				30F1649623A52B310080A0E0 /* RepoDetailViewController.swift in Sources */,
 				30F1649223A4E23F0080A0E0 /* UIViewControllerExtension.swift in Sources */,
 				30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */,
 				301D4F3C23A443D3008D3787 /* StringAndDateExtension.swift in Sources */,
+				30F1649423A504CB0080A0E0 /* CachedImageClass.swift in Sources */,
 				30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */,
 				304A0C6C23A2EC7900B50E6D /* WalkthroughViewController.swift in Sources */,
 				304A0C6423A2E67F00B50E6D /* StoryboardExtension.swift in Sources */,

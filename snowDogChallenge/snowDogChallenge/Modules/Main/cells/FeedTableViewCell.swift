@@ -11,10 +11,10 @@ import UIKit
 class FeedTableViewCell: UITableViewCell, CellMainFunctions {
     
     @IBOutlet weak var feedTitleLabel: UILabel!
-    @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var userImageView: CachedImageClass!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,12 +35,10 @@ class FeedTableViewCell: UITableViewCell, CellMainFunctions {
         descriptionLabel.text = feed.repoDescription
         timeLabel.text = feed.createdAt
         feedTitleLabel.text = "\(feed.actorName ?? "") \(feed.type ?? "") \(feed.repoName ?? "")"
-       
-        DispatchQueue.main.async {
-            if let url = URL(string: feed.actorImageUrl ?? ""), let data = try? Data(contentsOf: url) {
-                self.userImageView.image = UIImage(data: data)
-            }
+        if let imageURL = feed.actorImageUrl {
+            userImageView.loadImageFromApi(urlString: imageURL)
         }
+       
         
 
         

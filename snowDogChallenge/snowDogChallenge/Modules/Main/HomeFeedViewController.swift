@@ -25,7 +25,6 @@ class HomeFeedViewController: UIViewController {
     
     override func setUIElements(title: String?, viewDelegation: [UIView]?) {
         super.setUIElements(title: title, viewDelegation: viewDelegation)
-        
         getFeedData()
     }
     
@@ -41,6 +40,10 @@ class HomeFeedViewController: UIViewController {
             }
         }
     }
+    
+    private func getRepoDetail(endPoint: String) {
+
+    }
 }
 extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +55,30 @@ extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
         let feed = feedArray[indexPath.row]
         cell.populateCell(with: feed)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let url = feedArray[indexPath.row].repoUrl ?? ""
+        
+        //MARK: I used this function here in order to show ( _ = myVC.view )
+        
+        FeedApiController.getRepoDetail(endPoint: url) { (result) in
+            switch result {
+            case .success(let data):
+                let detailVC: RepoDetailViewController = UIStoryboard(storyboard: .main).create()
+                _ = detailVC.view  //<-------- trigger next viewcontroller life cycle
+                
+                self.navigationController?.pushViewController(detailVC, animated: true)
+                break
+            case .failure(let error):
+                break
+            }
+        }
+        
+        // ---------------------------------------------------------------
+        
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
