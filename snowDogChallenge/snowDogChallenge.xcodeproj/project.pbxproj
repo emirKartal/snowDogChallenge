@@ -11,6 +11,8 @@
 		301D4F3A23A41ABD008D3787 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */; };
 		301D4F3C23A443D3008D3787 /* StringAndDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F3B23A443D3008D3787 /* StringAndDateExtension.swift */; };
 		301D4F3E23A45098008D3787 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F3D23A45098008D3787 /* FeedModel.swift */; };
+		301D4F4023A4607F008D3787 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F3F23A4607F008D3787 /* Spinner.swift */; };
+		301D4F4223A46218008D3787 /* RepoDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D4F4123A46218008D3787 /* RepoDetailModel.swift */; };
 		304A0C6423A2E67F00B50E6D /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */; };
 		304A0C6823A2EA2B00B50E6D /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 304A0C6723A2EA2B00B50E6D /* Walkthrough.storyboard */; };
 		304A0C6A23A2EB6400B50E6D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304A0C6923A2EB6400B50E6D /* MainViewController.swift */; };
@@ -37,6 +39,8 @@
 		301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		301D4F3B23A443D3008D3787 /* StringAndDateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAndDateExtension.swift; sourceTree = "<group>"; };
 		301D4F3D23A45098008D3787 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		301D4F3F23A4607F008D3787 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		301D4F4123A46218008D3787 /* RepoDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailModel.swift; sourceTree = "<group>"; };
 		304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		304A0C6723A2EA2B00B50E6D /* Walkthrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		304A0C6923A2EB6400B50E6D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		304A0C6223A2E66100B50E6D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				30ED779D23A2AE11007E1D6D /* SupportingFiles */,
 				304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */,
 				301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */,
 				301D4F3B23A443D3008D3787 /* StringAndDateExtension.swift */,
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				30E9B72323A163AA001DF6F6 /* LaunchScreen.storyboard */,
+				301D4F3F23A4607F008D3787 /* Spinner.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,7 +184,6 @@
 				30E9B71A23A163A8001DF6F6 /* AppDelegate.swift */,
 				30E9B72623A163AA001DF6F6 /* Info.plist */,
 				304A0C6123A2E64B00B50E6D /* Helpers */,
-				30ED779D23A2AE11007E1D6D /* SupportingFiles */,
 				30ED779823A29E8D007E1D6D /* API */,
 				30ED77A023A2B28E007E1D6D /* Model */,
 				304A0C6523A2E92A00B50E6D /* View */,
@@ -211,6 +216,7 @@
 			children = (
 				30B5F83723A2BC840019BD75 /* UserModel.swift */,
 				301D4F3D23A45098008D3787 /* FeedModel.swift */,
+				301D4F4123A46218008D3787 /* RepoDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,9 +347,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */,
+				301D4F4023A4607F008D3787 /* Spinner.swift in Sources */,
 				304A0C7323A2F97F00B50E6D /* SearchViewController.swift in Sources */,
 				301D4F3E23A45098008D3787 /* FeedModel.swift in Sources */,
 				301D4F3823A3F95A008D3787 /* FeedApiController.swift in Sources */,
+				301D4F4223A46218008D3787 /* RepoDetailModel.swift in Sources */,
 				30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */,
 				301D4F3C23A443D3008D3787 /* StringAndDateExtension.swift in Sources */,
 				30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */,
