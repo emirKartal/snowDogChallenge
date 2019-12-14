@@ -12,6 +12,7 @@ import SwiftyJSON
 class FeedModel {
     var id: String?
     var createdAt: String?
+    var type: String?
     
     var repoName: String?
     var repoUrl: String?
@@ -32,6 +33,7 @@ class FeedModel {
         let feed = FeedModel()
         feed.id = json["id"].string
         feed.createdAt = json["created_at"].string
+        feed.type = json["type"].string
         
         feed.repoName = json["repo"]["name"].string
         feed.repoUrl = json["repo"]["url"].string

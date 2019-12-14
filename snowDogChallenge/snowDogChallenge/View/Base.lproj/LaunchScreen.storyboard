@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +15,42 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gm4-Lg-QfG">
+                                <rect key="frame" x="89" y="318" width="236" height="260.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNOWDOG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-iP-AI1">
+                                        <rect key="frame" x="0.0" y="210" width="236" height="50.5"/>
+                                        <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sd_logo" translatesAutoresizingMaskIntoConstraints="NO" id="98v-YJ-doQ">
+                                        <rect key="frame" x="18" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="FUr-8u-SOx"/>
+                                            <constraint firstAttribute="height" constant="200" id="yqJ-qx-fdq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Uv1-iP-AI1" firstAttribute="top" secondItem="98v-YJ-doQ" secondAttribute="bottom" constant="10" id="IxI-nj-mLo"/>
+                                    <constraint firstItem="98v-YJ-doQ" firstAttribute="centerX" secondItem="Gm4-Lg-QfG" secondAttribute="centerX" id="MaZ-4i-0pF"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uv1-iP-AI1" secondAttribute="bottom" id="NmQ-2k-OQp"/>
+                                    <constraint firstItem="Uv1-iP-AI1" firstAttribute="leading" secondItem="Gm4-Lg-QfG" secondAttribute="leading" id="OSW-Hf-12c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uv1-iP-AI1" secondAttribute="trailing" id="aud-gj-h8a"/>
+                                    <constraint firstItem="98v-YJ-doQ" firstAttribute="top" secondItem="Gm4-Lg-QfG" secondAttribute="top" id="f87-pJ-AAt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gm4-Lg-QfG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5lP-0Y-Z8p"/>
+                            <constraint firstItem="Gm4-Lg-QfG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iBc-xs-Npb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -22,4 +59,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sd_logo" width="225" height="225"/>
+    </resources>
 </document>

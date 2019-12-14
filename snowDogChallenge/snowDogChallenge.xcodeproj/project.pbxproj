@@ -30,6 +30,10 @@
 		30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED779923A29EAC007E1D6D /* ApiController.swift */; };
 		30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED779B23A2ACBD007E1D6D /* AuthenticationApiController.swift */; };
 		30ED779F23A2AE26007E1D6D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ED779E23A2AE26007E1D6D /* Globals.swift */; };
+		30F1648A23A4CF2F0080A0E0 /* WalkthroughCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1648923A4CF2F0080A0E0 /* WalkthroughCollectionViewCell.swift */; };
+		30F1648D23A4DF600080A0E0 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1648C23A4DF600080A0E0 /* FeedTableViewCell.swift */; };
+		30F1649023A4E1A00080A0E0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1648F23A4E1A00080A0E0 /* Protocols.swift */; };
+		30F1649223A4E23F0080A0E0 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649123A4E23F0080A0E0 /* UIViewControllerExtension.swift */; };
 		DA08F6CA62F522E1B9C0DCA0 /* Pods_snowDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,10 @@
 		30ED779923A29EAC007E1D6D /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		30ED779B23A2ACBD007E1D6D /* AuthenticationApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationApiController.swift; sourceTree = "<group>"; };
 		30ED779E23A2AE26007E1D6D /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		30F1648923A4CF2F0080A0E0 /* WalkthroughCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughCollectionViewCell.swift; sourceTree = "<group>"; };
+		30F1648C23A4DF600080A0E0 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		30F1648F23A4E1A00080A0E0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		30F1649123A4E23F0080A0E0 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		54315E5876E3B472E32D1597 /* Pods-snowDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowDogChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +95,8 @@
 		304A0C6123A2E64B00B50E6D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				30F1648E23A4E18D0080A0E0 /* Protocol */,
+				30ED779D23A2AE11007E1D6D /* SupportingFiles */,
 				304A0C6223A2E66100B50E6D /* Extensions */,
 			);
 			path = Helpers;
@@ -95,10 +105,10 @@
 		304A0C6223A2E66100B50E6D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				30ED779D23A2AE11007E1D6D /* SupportingFiles */,
 				304A0C6323A2E67F00B50E6D /* StoryboardExtension.swift */,
 				301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */,
 				301D4F3B23A443D3008D3787 /* StringAndDateExtension.swift */,
+				30F1649123A4E23F0080A0E0 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -126,6 +136,7 @@
 		304A0C6E23A2F0C700B50E6D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				30F1648B23A4DF490080A0E0 /* cells */,
 				30E9B71E23A163A8001DF6F6 /* Main.storyboard */,
 				30E9B71C23A163A8001DF6F6 /* LoginViewController.swift */,
 				304A0C6923A2EB6400B50E6D /* MainViewController.swift */,
@@ -138,6 +149,7 @@
 		304A0C6F23A2F0DE00B50E6D /* Walkthrough */ = {
 			isa = PBXGroup;
 			children = (
+				30F1648823A4CF050080A0E0 /* cells */,
 				304A0C6723A2EA2B00B50E6D /* Walkthrough.storyboard */,
 				304A0C6B23A2EC7900B50E6D /* WalkthroughViewController.swift */,
 			);
@@ -219,6 +231,30 @@
 				301D4F4123A46218008D3787 /* RepoDetailModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		30F1648823A4CF050080A0E0 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				30F1648923A4CF2F0080A0E0 /* WalkthroughCollectionViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		30F1648B23A4DF490080A0E0 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				30F1648C23A4DF600080A0E0 /* FeedTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		30F1648E23A4E18D0080A0E0 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				30F1648F23A4E1A00080A0E0 /* Protocols.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		3DBF2F4FED8694C08F358401 /* Pods */ = {
@@ -349,9 +385,11 @@
 				30E9B71D23A163A8001DF6F6 /* LoginViewController.swift in Sources */,
 				301D4F4023A4607F008D3787 /* Spinner.swift in Sources */,
 				304A0C7323A2F97F00B50E6D /* SearchViewController.swift in Sources */,
+				30F1649023A4E1A00080A0E0 /* Protocols.swift in Sources */,
 				301D4F3E23A45098008D3787 /* FeedModel.swift in Sources */,
 				301D4F3823A3F95A008D3787 /* FeedApiController.swift in Sources */,
 				301D4F4223A46218008D3787 /* RepoDetailModel.swift in Sources */,
+				30F1649223A4E23F0080A0E0 /* UIViewControllerExtension.swift in Sources */,
 				30E9B71B23A163A8001DF6F6 /* AppDelegate.swift in Sources */,
 				301D4F3C23A443D3008D3787 /* StringAndDateExtension.swift in Sources */,
 				30ED779C23A2ACBD007E1D6D /* AuthenticationApiController.swift in Sources */,
@@ -362,7 +400,9 @@
 				304A0C7923A2FE5300B50E6D /* NavigationController.swift in Sources */,
 				301D4F3A23A41ABD008D3787 /* NotificationNameExtension.swift in Sources */,
 				30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */,
+				30F1648D23A4DF600080A0E0 /* FeedTableViewCell.swift in Sources */,
 				304A0C7623A2FA4800B50E6D /* TabBarController.swift in Sources */,
+				30F1648A23A4CF2F0080A0E0 /* WalkthroughCollectionViewCell.swift in Sources */,
 				304A0C6A23A2EB6400B50E6D /* MainViewController.swift in Sources */,
 				304A0C7123A2F96E00B50E6D /* HomeFeedViewController.swift in Sources */,
 			);
