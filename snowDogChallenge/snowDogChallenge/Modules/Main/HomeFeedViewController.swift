@@ -56,6 +56,7 @@ class HomeFeedViewController: UIViewController {
                 self?.feedTableView.reloadData()
                 break
             case .failure(let error):
+                self?.showBanner(title: "Error", subTitle: error.message, style: .danger)
                 break
             }
         }

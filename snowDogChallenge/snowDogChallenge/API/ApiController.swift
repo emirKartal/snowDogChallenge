@@ -21,6 +21,9 @@ class ApiController {
             let json = JSON(response.result.value as Any)
             
             if response.result.isSuccess {
+                if let message = json["message"].string {
+                    completion(.failure(APIError(type: .apiMessage, message: message)))
+                }//"message": "Not Found",
                 completion(.success(json))
             } else {
                 completion(.failure(APIError(type: .general)))

@@ -8,8 +8,14 @@
 
 import Foundation
 import UIKit
+import NotificationBannerSwift
 
 extension UIViewController: ControllerMainFunctions  {
+    
+    func showBanner(title: String, subTitle: String, style: BannerStyle) {
+        let banner = NotificationBanner(title: title, subtitle: subTitle, leftView: nil, rightView: nil, style: style, colors: nil)
+        banner.show()
+    }
     
     //This func prevent writing same codes for setting up ui again
     @objc func setUIElements(title: String?, viewDelegation: [UIView]?) {

@@ -9,5 +9,6 @@ target 'snowDogChallenge' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Valet', '~> 3.2'
+  pod 'NotificationBannerSwift', '2.5.0'
 
 end

@@ -60,6 +60,7 @@ class SearchViewController: UIViewController {
                 self?.searchTableView.reloadData()
                 break
             case .failure(let error):
+                self?.showBanner(title: "Error", subTitle: error.message, style: .danger)
                 self?.isInProgress = false
                 //Spinner.stop()
                 break

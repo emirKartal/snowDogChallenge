@@ -37,6 +37,7 @@ class LoginViewController: UIViewController {
                 self?.dismiss(animated: true, completion: nil)
                 break
             case .failure(let error):
+                self?.showBanner(title: "Error", subTitle: error.message, style: .danger)
                 break
             }
         }

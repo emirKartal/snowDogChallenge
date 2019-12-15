@@ -40,6 +40,7 @@ class RepoDetailViewController: UIViewController {
                 self?.fillLabels(data: data ?? RepoDetailModel())
                 break
             case .failure(let error):
+                self?.showBanner(title: "Error", subTitle: error.message, style: .danger)
                 self?.apiResponse?(false)
                 break
             }

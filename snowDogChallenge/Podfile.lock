@@ -1,24 +1,36 @@
 PODS:
   - Alamofire (4.9.1)
+  - MarqueeLabel (4.0.0)
+  - NotificationBannerSwift (2.5.0):
+    - MarqueeLabel (~> 4.0.0)
+    - SnapKit (~> 5.0.0)
+  - SnapKit (5.0.1)
   - SwiftyJSON (5.0.0)
   - Valet (3.2.6)
 
 DEPENDENCIES:
   - Alamofire
+  - NotificationBannerSwift (= 2.5.0)
   - SwiftyJSON
   - Valet (~> 3.2)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - MarqueeLabel
+    - NotificationBannerSwift
+    - SnapKit
     - SwiftyJSON
     - Valet
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  MarqueeLabel: b55b26e690b6ad41faedd95cbf5eae6f1d1735b4
+  NotificationBannerSwift: 684966fa934c48b70eff8bbec93fccf8db603365
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Valet: dcc4ff74f0d010be665239ab89c7a4a5cd39ee33
 
-PODFILE CHECKSUM: c4f3fd6c8f878ba65237f097f62eeb8787f38786
+PODFILE CHECKSUM: 097c831beb699e9c157384a4dd1a04e2604eec25
 
 COCOAPODS: 1.8.4
