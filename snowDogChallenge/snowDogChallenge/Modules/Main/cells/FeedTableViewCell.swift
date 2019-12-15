@@ -15,10 +15,23 @@ class FeedTableViewCell: UITableViewCell, CellMainFunctions {
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var userImageView: CachedImageClass!
+    @IBOutlet weak var starredButton: UIButton!
+    
+    @IBOutlet weak var tagView: UIView!
+    
+    var likeTapped: (()->())?
+    var isStarred = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        tagView.layer.cornerRadius = 10
+        tagView.layer.borderWidth = 1
+        tagView.layer.borderColor = UIColor.gray.cgColor
         
+    }
+    override func prepareForReuse() {
+        // I couldnt find in whether repo is starred. So I leave it like that. But if it comes from api I would solve reusable cell problem here.
+        starredButton.isSelected = isStarred
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,17 +46,17 @@ class FeedTableViewCell: UITableViewCell, CellMainFunctions {
         let feed = with as! FeedModel
         repoNameLabel.text = feed.repoName
         descriptionLabel.text = feed.repoDescription
-        timeLabel.text = feed.createdAt
+        timeLabel.text = "Updated at \(feed.createdAt ?? "")"
         feedTitleLabel.text = "\(feed.actorName ?? "") \(feed.type ?? "") \(feed.repoName ?? "")"
         if let imageURL = feed.actorImageUrl {
             userImageView.loadImageFromApi(urlString: imageURL)
         }
        
-        
-
-        
     }
     
-
+    @IBAction func likeAction(_ sender: Any) {
+        likeTapped?()
+    }
+    
 
 }

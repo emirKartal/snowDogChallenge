@@ -39,6 +39,7 @@
 		30F1649823A59AFD0080A0E0 /* SearchApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649723A59AFD0080A0E0 /* SearchApiController.swift */; };
 		30F1649A23A59EE00080A0E0 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649923A59EE00080A0E0 /* SearchModel.swift */; };
 		30F1649C23A5A2B80080A0E0 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649B23A5A2B80080A0E0 /* SearchTableViewCell.swift */; };
+		30F1649E23A675060080A0E0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F1649D23A675060080A0E0 /* UIColorExtension.swift */; };
 		DA08F6CA62F522E1B9C0DCA0 /* Pods_snowDogChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		30F1649723A59AFD0080A0E0 /* SearchApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchApiController.swift; sourceTree = "<group>"; };
 		30F1649923A59EE00080A0E0 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		30F1649B23A5A2B80080A0E0 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		30F1649D23A675060080A0E0 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		54315E5876E3B472E32D1597 /* Pods-snowDogChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-snowDogChallenge.debug.xcconfig"; path = "Target Support Files/Pods-snowDogChallenge/Pods-snowDogChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		DD69DF28F98E623B546A9537 /* Pods_snowDogChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_snowDogChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +121,7 @@
 				301D4F3923A41ABD008D3787 /* NotificationNameExtension.swift */,
 				301D4F3B23A443D3008D3787 /* StringAndDateExtension.swift */,
 				30F1649123A4E23F0080A0E0 /* UIViewControllerExtension.swift */,
+				30F1649D23A675060080A0E0 /* UIColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				304A0C7923A2FE5300B50E6D /* NavigationController.swift in Sources */,
 				301D4F3A23A41ABD008D3787 /* NotificationNameExtension.swift in Sources */,
 				30ED779A23A29EAC007E1D6D /* ApiController.swift in Sources */,
+				30F1649E23A675060080A0E0 /* UIColorExtension.swift in Sources */,
 				30F1649823A59AFD0080A0E0 /* SearchApiController.swift in Sources */,
 				30F1648D23A4DF600080A0E0 /* FeedTableViewCell.swift in Sources */,
 				304A0C7623A2FA4800B50E6D /* TabBarController.swift in Sources */,

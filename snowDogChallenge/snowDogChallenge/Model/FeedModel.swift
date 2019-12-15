@@ -11,8 +11,18 @@ import SwiftyJSON
 
 class FeedModel {
     var id: String?
-    var createdAt: String?
-    var type: String?
+    var createdAt: String? {
+        didSet {
+            //2019-12-13T12:30:08Z"
+            createdAt = createdAt?.convertToDate(format: "yyyy-MM-dd'T'HH:mm:ss'Z')")?.convertToString(format:  "d MMM yy hh:mm")
+        }
+    }
+    var type: String? {
+        didSet {
+            let enumType = FeedType(rawValue: type ?? "")
+            type = enumType?.manuplate
+        }
+    }
     
     var repoName: String?
     var repoUrl: String?
@@ -46,4 +56,18 @@ class FeedModel {
         return feed
     }
     
+}
+
+enum FeedType: String {
+    case createEvent = "CreateEvent"
+    case forkEvent = "ForkEvent"
+    
+    var manuplate: String {
+        switch self {
+        case .createEvent:
+            return "created"
+        case .forkEvent:
+            return "forked"
+        }
+    }
 }

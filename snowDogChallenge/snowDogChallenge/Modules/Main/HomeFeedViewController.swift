@@ -76,6 +76,11 @@ extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "feedCell") as! FeedTableViewCell
         let feed = feedArray[indexPath.row]
         cell.populateCell(with: feed)
+        
+        cell.likeTapped = {
+            cell.isStarred = cell.starredButton.isSelected
+            cell.starredButton.isSelected = !cell.starredButton.isSelected
+        }
         return cell
     }
     

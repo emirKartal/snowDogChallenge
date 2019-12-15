@@ -35,6 +35,7 @@ class SearchViewController: UIViewController {
     override func setUIElements(title: String?, viewDelegation: [UIView]?) {
         super.setUIElements(title: title, viewDelegation: viewDelegation)
         displayCountView.isHidden = true
+        searchBar.barTintColor = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1)
     }
     
     private func search(query: String, page: Int) {

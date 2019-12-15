@@ -15,7 +15,7 @@ class NavigationController: UINavigationController {
 
         self.navigationBar.isTranslucent = false
         self.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.shadowImage = UIColor.lightGray.image(CGSize(width: self.view.frame.width, height: 0.6))
         self.navigationBar.barTintColor = .white
         self.navigationBar.tintColor = .black
         self.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black, .font: UIFont.systemFont(ofSize: 14)]
