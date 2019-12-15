@@ -14,8 +14,16 @@ class RepoDetailModel {
     var name: String?
     var fullName: String?
     var isPrivate: Bool?
-    var createdAt: String?
-    var updatedAt: String?
+    var createdAt: String?{
+        didSet {
+            createdAt = createdAt?.convertToDate(format: "yyyy-MM-dd'T'HH:mm:ss'Z')")?.convertToString(format:  "d MMM yy hh:mm")
+        }
+    }
+    var updatedAt: String?{
+        didSet {
+            updatedAt = updatedAt?.convertToDate(format: "yyyy-MM-dd'T'HH:mm:ss'Z')")?.convertToString(format:  "d MMM yy hh:mm")
+        }
+    }
     var language: String?
     var starCount: Int?
     var watcherCount: Int?

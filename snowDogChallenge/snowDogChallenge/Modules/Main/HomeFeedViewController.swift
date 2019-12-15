@@ -88,24 +88,19 @@ extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
         
         let url = feedArray[indexPath.row].repoEndPoint ?? ""
         
-        //MARK: I used this function here in order to show ( _ = myVC.view )
-        
-        FeedApiController.getRepoDetail(endPoint: url) { [weak self](result) in
-            switch result {
-            case .success(let data):
-                let detailVC: RepoDetailViewController = UIStoryboard(storyboard: .main).create()
-                _ = detailVC.view  //<-------- trigger next viewcontroller life cycle
-                let repoDetailData = data
-                detailVC.repoNameLabel.text = repoDetailData?.fullName
+        let detailVC: RepoDetailViewController = UIStoryboard(storyboard: .main).create()
+        _ = detailVC.view  //<-------- trigger next viewcontroller life cycle
+        detailVC.getDetailData(url: url)
+        Spinner.start()
+        detailVC.apiResponse = { [weak self](isSuccess) in
+            if isSuccess {
+                Spinner.stop()
                 self?.navigationController?.pushViewController(detailVC, animated: true)
-                break
-            case .failure(let error):
-                break
+            } else {
+                Spinner.stop()
+                print("error")
             }
         }
-        
-        // ---------------------------------------------------------------
-        
         
     }
     

@@ -88,6 +88,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let detailData = searchItems[indexPath.row]
+        let detailVC: RepoDetailViewController = UIStoryboard(storyboard: .main).create()
+        _ = detailVC.view
+        detailVC.fillLabels(data: detailData)
+        self.navigationController?.pushViewController(detailVC, animated: true)
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
