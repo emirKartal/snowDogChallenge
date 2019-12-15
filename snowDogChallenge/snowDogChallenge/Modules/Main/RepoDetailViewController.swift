@@ -10,6 +10,8 @@ import UIKit
 
 class RepoDetailViewController: UIViewController {
 
+    @IBOutlet weak var repoNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -23,6 +23,8 @@ extension UIViewController: ControllerMainFunctions  {
                 tableView.delegate = self as? UITableViewDelegate
                 tableView.dataSource = self as? UITableViewDataSource
                 tableView.tableFooterView = UIView()
+            } else if let searchBar = view as? UISearchBar {
+                searchBar.delegate = self as? UISearchBarDelegate
             }
         })
     }

@@ -59,17 +59,18 @@ extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let url = feedArray[indexPath.row].repoUrl ?? ""
+        let url = feedArray[indexPath.row].repoEndPoint ?? ""
         
         //MARK: I used this function here in order to show ( _ = myVC.view )
         
-        FeedApiController.getRepoDetail(endPoint: url) { (result) in
+        FeedApiController.getRepoDetail(endPoint: url) { [weak self](result) in
             switch result {
             case .success(let data):
                 let detailVC: RepoDetailViewController = UIStoryboard(storyboard: .main).create()
                 _ = detailVC.view  //<-------- trigger next viewcontroller life cycle
-                
-                self.navigationController?.pushViewController(detailVC, animated: true)
+                let repoDetailData = data
+                detailVC.repoNameLabel.text = repoDetailData?.fullName
+                self?.navigationController?.pushViewController(detailVC, animated: true)
                 break
             case .failure(let error):
                 break

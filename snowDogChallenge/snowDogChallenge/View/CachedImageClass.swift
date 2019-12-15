@@ -12,6 +12,11 @@ import UIKit
 
 class CachedImageClass: UIImageView {
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = self.frame.width / 2
+    }
+    
     var imageURLString: String?
     
     func loadImageFromApi(urlString: String) {

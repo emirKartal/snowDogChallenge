@@ -22,6 +22,8 @@ class RepoDetailModel {
     var forkCount: Int?
     var openIssuesCount: Int?
     var subscriberCount: Int?
+    var ownerName: String?
+    var ownerImage: String?
     
     class func parseRepoDetailModel(from json: JSON)-> RepoDetailModel {
         let repoDetail = RepoDetailModel()
@@ -37,6 +39,8 @@ class RepoDetailModel {
         repoDetail.forkCount = json["forks"].int
         repoDetail.openIssuesCount = json["open_issues_count"].int
         repoDetail.subscriberCount = json["subscribers_count"].int
+        repoDetail.ownerImage = json["owner"]["avatar_url"].string
+        repoDetail.ownerName = json["owner"]["login"].string
         
         return repoDetail
     }

@@ -31,10 +31,10 @@ class LoginViewController: UIViewController {
     }
     
     private func getUserData() {
-        AuthenticationApiController.getUserData { (result) in
+        AuthenticationApiController.getUserData { [weak self](result) in
             switch result {
             case .success(_):
-                self.dismiss(animated: true, completion: nil)
+                self?.dismiss(animated: true, completion: nil)
                 break
             case .failure(let error):
                 break

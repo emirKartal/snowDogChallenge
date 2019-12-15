@@ -82,5 +82,5 @@ public enum APIResult<Value,APIError> {
 enum EndPoint: String {
     case accessTokenEndPoint = "login/oauth/access_token"
     case userEndPoint = "user"
-    
+    case searchRepoEndPoint = "search/repositories"
 }
