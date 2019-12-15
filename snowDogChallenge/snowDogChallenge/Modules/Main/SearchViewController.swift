@@ -98,7 +98,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         if bottomEdge <= scrollView.frame.size.height && !isLastPage && !isInProgress {
             currentPage += 1
             search(query: searchText, page: currentPage)
-            print(currentPage)
+            
         }
     }
 }

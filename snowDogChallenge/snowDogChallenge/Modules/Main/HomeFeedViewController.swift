@@ -14,7 +14,15 @@ class HomeFeedViewController: UIViewController {
     
     @IBOutlet weak var feedTableView: UITableView!
     
-    var feedArray: [FeedModel] = []
+    private var refreshControl = UIRefreshControl()
+    
+    //Pagination Variables
+    private var currentPage = 0
+    private var isLastPage = false
+    private var isInProgress = false
+    //----------------------
+    
+    private var feedArray: [FeedModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +33,26 @@ class HomeFeedViewController: UIViewController {
     
     override func setUIElements(title: String?, viewDelegation: [UIView]?) {
         super.setUIElements(title: title, viewDelegation: viewDelegation)
-        getFeedData()
+        getFeedData(page: currentPage)
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        feedTableView.addSubview(refreshControl)
     }
     
-    private func getFeedData() {
-        FeedApiController.getFeeds { [weak self](result) in
+    private func getFeedData(page: Int) {
+        
+        isInProgress = true
+        FeedApiController.getFeeds(page: page) { [weak self](result) in
             switch result {
             case .success(let data):
-                self?.feedArray = data ?? []
+                
+                self?.isInProgress = false
+                self?.isLastPage = data?.count ?? 0 == 0
+                
+                if self?.currentPage == 0 {
+                    self?.feedArray = data ?? []
+                } else {
+                    self?.feedArray += data ?? []
+                }
                 self?.feedTableView.reloadData()
                 break
             case .failure(let error):
@@ -41,8 +61,10 @@ class HomeFeedViewController: UIViewController {
         }
     }
     
-    private func getRepoDetail(endPoint: String) {
-
+    @objc func refreshTableView() {
+        currentPage = 0
+        getFeedData(page: currentPage)
+        refreshControl.endRefreshing()
     }
 }
 extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -84,6 +106,15 @@ extension HomeFeedViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let bottomEdge = scrollView.contentSize.height - (scrollView.contentOffset.y + scrollView.frame.size.height)
+        if bottomEdge <= scrollView.frame.size.height && !isLastPage && !isInProgress {
+            currentPage += 1
+            getFeedData(page: currentPage)
+            
+        }
     }
     
 }

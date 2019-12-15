@@ -14,6 +14,7 @@ extension UIViewController: ControllerMainFunctions  {
     //This func prevent writing same codes for setting up ui again
     @objc func setUIElements(title: String?, viewDelegation: [UIView]?) {
         self.navigationItem.title = title
+        addLogoutButton()
         
         viewDelegation?.forEach({ (view) in
             if let collectionView = view as? UICollectionView {
@@ -29,6 +30,18 @@ extension UIViewController: ControllerMainFunctions  {
         })
     }
     
+    func addLogoutButton() {
+        let logoutButton = UIBarButtonItem(image: UIImage(named: "sd_logout"), style: .plain, target: self, action: #selector(logout))
+        self.navigationItem.rightBarButtonItem = logoutButton
+    }
     
+    @objc func logout() {
+        User.removeUserAllData()
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let mainVC: MainViewController = UIStoryboard(storyboard: .main).create()
+            appDelegate.window?.rootViewController = mainVC
+            appDelegate.window?.makeKeyAndVisible()
+        }
+    }
     
 }

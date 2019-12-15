@@ -10,9 +10,11 @@ import Foundation
 
 class FeedApiController: ApiController {
     
-    class func getFeeds(completion: @escaping (_ result: APIResult<[FeedModel]?, APIError>)->()) {
+    class func getFeeds(page:Int, completion: @escaping (_ result: APIResult<[FeedModel]?, APIError>)->()) {
         
         let feedUrl = User.currentUser.receivedEventsEndPoint!
+        var parameters = [String:Any]()
+        parameters["page"] = page
         
         performRequest(endPoint: feedUrl, parameters: nil) { (result) in
             switch result {
