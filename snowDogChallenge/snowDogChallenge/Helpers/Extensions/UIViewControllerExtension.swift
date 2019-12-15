@@ -14,8 +14,7 @@ extension UIViewController: ControllerMainFunctions  {
     //This func prevent writing same codes for setting up ui again
     @objc func setUIElements(title: String?, viewDelegation: [UIView]?) {
         self.navigationItem.title = title
-        addLogoutButton()
-        
+        addLogoutButtonAndHomeButton()
         viewDelegation?.forEach({ (view) in
             if let collectionView = view as? UICollectionView {
                 collectionView.delegate = self as? UICollectionViewDelegate
@@ -30,9 +29,23 @@ extension UIViewController: ControllerMainFunctions  {
         })
     }
     
-    func addLogoutButton() {
+    func addLogoutButtonAndHomeButton() {
+        
+        let containView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        let imageview = CachedImageClass(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        imageview.loadImageFromApi(urlString: User.currentUser.userImage ?? "")
+        imageview.contentMode = UIView.ContentMode.scaleAspectFit
+        imageview.layer.masksToBounds = true
+        imageview.layer.cornerRadius = imageview.frame.width / 2
+        containView.addSubview(imageview)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(profileButtonAction))
+        containView.isUserInteractionEnabled = true
+        containView.addGestureRecognizer(tapGesture)
+    
         let logoutButton = UIBarButtonItem(image: UIImage(named: "sd_logout"), style: .plain, target: self, action: #selector(logout))
-        self.navigationItem.rightBarButtonItem = logoutButton
+         let profileButton = UIBarButtonItem(customView: containView)
+        self.navigationItem.rightBarButtonItems = [logoutButton,profileButton]
     }
     
     @objc func logout() {
@@ -42,6 +55,10 @@ extension UIViewController: ControllerMainFunctions  {
             appDelegate.window?.rootViewController = mainVC
             appDelegate.window?.makeKeyAndVisible()
         }
+    }
+    
+    @objc func profileButtonAction(){
+        print("homeAction")
     }
     
 }
